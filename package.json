@@ -1,0 +1,26 @@
+{
+  "name": "zigbee2mqtt-adapter-proxy",
+  "version": "0.1.0",
+  "description": "A serialport proxy for the coordinator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-brand/zigbee2mqtt-adapter-proxy.git"
+  },
+  "keywords": [
+    "zigbee2mqtt",
+    "coordinator",
+    "proxy",
+    "adapter",
+    "ser2net"
+  ],
+  "author": "Tim Brand <t.brand@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tim-brand/zigbee2mqtt-adapter-proxy/issues"
+  },
+  "homepage": "https://github.com/tim-brand/zigbee2mqtt-adapter-proxy#readme"
+}
