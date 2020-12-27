@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/tim-brand/zigbee2mqtt-adapter-proxy/issues"
   },
-  "homepage": "https://github.com/tim-brand/zigbee2mqtt-adapter-proxy#readme"
+  "homepage": "https://github.com/tim-brand/zigbee2mqtt-adapter-proxy#readme",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "js-yaml": "^3.14.1",
+    "serialport": "^9.0.4"
+  }
 }
