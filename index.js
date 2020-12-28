@@ -1,6 +1,7 @@
 'use strict'
 
 const SerialportProxy = require('./lib/serialport-proxy')
+const Config = require('./lib/config')
 
 let serialportProxy
 
@@ -11,11 +12,11 @@ const run = async () => {
   try {
     config = await Config.loadFromFile(configPath)
   } catch (err) {
-    console.error('Error while loading the config file.', err.message)
+    console.error(`Error while loading the config file (${configPath})`, err.message)
     process.exit(1)
   }
 
-  serialportProxy = new SerialportProxy(portConfig)
+  serialportProxy = new SerialportProxy(config)
   await serialportProxy.start()
 }
 
@@ -24,8 +25,8 @@ const handleExit = (signal) => {
   if (handlingExit) return
   handlingExit = true
   console.log(`${signal} received`)
-  for (const portProxy of portProxyList) {
-    portProxy.stop()
+  if (serialportProxy) {
+    serialportProxy.stop()
   }
 }
 
