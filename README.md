@@ -9,7 +9,7 @@ Example for Raspberry Pi, adapt for your user.
 ```bash
 # Create dir in /opt
 sudo mkdir /opt/zigbee2mqtt-adapter-proxy
-sudo chmod pi:pi /opt/zigbee2mqtt-adapter-proxy
+sudo chown pi:pi /opt/zigbee2mqtt-adapter-proxy
 # Clone to /opt
 git clone https://github.com/tim-brand/zigbee2mqtt-adapter-proxy.git /opt/zigbee2mqtt-adapter-proxy
 ```
