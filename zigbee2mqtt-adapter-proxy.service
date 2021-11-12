@@ -1,0 +1,14 @@
+[Unit]
+Description=Zigbee2MQTT Adapter Proxy
+Documentation=https://github.com/tim-brand/zigbee2mqtt-adapter-proxy
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/node /opt/zigbee2mqtt-adapter-proxy/index.js /opt/zigbee2mqtt-adapter-proxy/config.yaml
+WorkingDirectory=/opt/zigbee2mqtt-adapter-proxy
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
