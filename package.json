@@ -4,7 +4,9 @@
   "description": "A serialport proxy for the coordinator.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js config.yaml",
+    "debug": "DEBUG=zigbee2mqtt-adapter-proxy:*,-*:data node index.js config.yaml",
+    "debug:data": "DEBUG=zigbee2mqtt-adapter-proxy:* node index.js config.yaml"
   },
   "repository": {
     "type": "git",
