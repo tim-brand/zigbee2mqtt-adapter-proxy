@@ -3,6 +3,8 @@
 const SerialportProxy = require('./lib/serialport-proxy')
 const Config = require('./lib/config')
 
+const log = require('./lib/log')('main')
+
 let serialportProxy
 
 const run = async () => {
@@ -10,7 +12,9 @@ const run = async () => {
   let config
 
   try {
+    log.debug(`Start loading configuration from path: ${configPath}`)
     config = await Config.loadFromFile(configPath)
+    log.debug('Config loaded: ', config)
   } catch (err) {
     console.error(`Error while loading the config file (${configPath})`, err.message)
     process.exit(1)
@@ -22,6 +26,7 @@ const run = async () => {
 
 let handlingExit = false
 const handleExit = (signal) => {
+  log.info(`handleExit called with signal:${signal}`)
   if (handlingExit) return
   handlingExit = true
   console.log(`${signal} received`)
