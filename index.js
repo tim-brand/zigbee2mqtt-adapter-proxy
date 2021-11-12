@@ -16,7 +16,7 @@ const run = async () => {
     process.exit(1)
   }
 
-  serialportProxy = new SerialportProxy(config)
+  serialportProxy = new SerialportProxy(config.config)
   await serialportProxy.start()
 }
 
