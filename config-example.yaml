@@ -1,0 +1,7 @@
+config:
+  path: /dev/ttyUSB0
+  baudrate: 115200
+  socketPort: 20108
+  socketAddress: "::"
+  rtscts: false
+  skipBootloader: true
