@@ -36,13 +36,12 @@ cp $WORKDIR/config-example.yaml $WORKDIR/config.yaml
 
 ### Start
 
-You can start the service using the following command
-If you would like to run the application as a service, check the next section
-"## Install systemd service".
+You can start the service and check if it's running by using the following command.
 ```shell
 cd $WORKDIR
 npm start
 ```
+If you would like to run the application as a service, check the following section.
 
 
 ## Install systemd service
